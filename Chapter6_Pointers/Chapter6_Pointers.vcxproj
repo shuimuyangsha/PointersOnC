@@ -123,6 +123,9 @@
     <ClInclude Include="del_substr.h" />
     <ClInclude Include="find_char.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Chapter6_Pointers.vsdx" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

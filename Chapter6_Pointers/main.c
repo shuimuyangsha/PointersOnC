@@ -20,9 +20,11 @@
 #include "stdio.h"
 #include "del_substr.h"
 
+char str[] = {"ABCEDFG"};
+char substr[] = {"FGH"};
 
 int main(void)
 {
-
+	del_substr(&str, &substr);
 	return 0;
 }
