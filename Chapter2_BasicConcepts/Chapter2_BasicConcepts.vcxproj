@@ -115,13 +115,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="increment.c" />
     <ClCompile Include="main.c" />
-    <ClCompile Include="negate.c" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="increment.h" />
-    <ClInclude Include="negate.h" />
+    <ClCompile Include="source_chack.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
