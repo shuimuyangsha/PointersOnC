@@ -7,6 +7,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Chapter2_BasicConcepts", "C
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Chapter6_Pointers", "Chapter6_Pointers\Chapter6_Pointers.vcxproj", "{E531CF51-54C4-4352-964F-F8C09DE7EF9B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{174FC3B3-4526-4A10-A235-6BFB0C740EA7}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\嵌入式学习\资料\野火STM32\1-F429至尊版\A盘（资料盘）\8-C语言学习资料\C和指针.pdf = ..\..\..\嵌入式学习\资料\野火STM32\1-F429至尊版\A盘（资料盘）\8-C语言学习资料\C和指针.pdf
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64

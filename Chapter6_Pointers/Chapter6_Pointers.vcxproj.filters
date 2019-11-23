@@ -18,5 +18,19 @@
     <ClCompile Include="main.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="find_char.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="del_substr.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="find_char.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="del_substr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
