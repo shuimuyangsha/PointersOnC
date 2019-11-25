@@ -37,20 +37,43 @@
 //}
 
 
-/*第三题*/
-#include "reverse_string.h"
+///*第三题*/
+//#include "reverse_string.h"
+//#include "stdio.h"
+//#include "string.h"
+//
+//char string[] = {"ABCDEFG"};
+//int main(void) 
+//{
+//	printf("%s\r\n",&string);
+//	reverse_string(&string);
+//	printf("%s\r\n", &string);
+//
+//	while (1);
+//	return 0;
+//}
+
+
+/*第四题*/
+#include "math.h"
 #include "stdio.h"
 #include "string.h"
+#include "eratosthenes.h"
+#include "time.h"
 
-char string[] = {"ABCDEFG"};
-int main(void) 
-{
-	printf("%s\r\n",&string);
-	reverse_string(&string);
-	printf("%s\r\n", &string);
+clock_t SpendTime;
 
+#define AMOUNT  (int)100000		//总数
+char num[AMOUNT] = { TRUE };	//记录是否为质数
+int PrimeNumber = 0;	//质数的个数
+int main(void) {
+	memset(&num, TRUE, AMOUNT);
+
+	PrimeNumber = eratosthenes(num,AMOUNT);
+	printf("质数有%d个。\r\n", PrimeNumber);
+	SpendTime = clock();
+	printf("程序开始执行后占用处理器时间%d\r\n", SpendTime);
 	while (1);
 	return 0;
 }
-
 

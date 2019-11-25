@@ -116,12 +116,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="del_substr.c" />
+    <ClCompile Include="eratosthenes.c" />
     <ClCompile Include="find_char.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="reverse_string.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="del_substr.h" />
+    <ClInclude Include="eratosthenes.h" />
     <ClInclude Include="find_char.h" />
     <ClInclude Include="reverse_string.h" />
   </ItemGroup>
