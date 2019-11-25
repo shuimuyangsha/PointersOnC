@@ -24,12 +24,18 @@
     <ClCompile Include="del_substr.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="reverse_string.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="find_char.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="del_substr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="reverse_string.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
