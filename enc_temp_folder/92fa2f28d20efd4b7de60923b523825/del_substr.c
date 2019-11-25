@@ -71,6 +71,8 @@ int del_substr(char *str, const char  *substr)
 	char *p1 = str;
 	char *p2 = substr;
 
+	
+
 	for (i = 0; i <= str_len - substr_len;i++) {
 		k = i;
 
@@ -81,6 +83,7 @@ int del_substr(char *str, const char  *substr)
 			my_strdel(p1 + (str_len - substr_len), substr_len);
 			return result;
 		}
+
 	}
 	return 0;
 
