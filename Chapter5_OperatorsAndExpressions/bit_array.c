@@ -18,7 +18,7 @@ void clear_bit(char bit_array[], unsigned int bit_number)
 {
 	char *p;
 	p = bit_array + (bit_number / 8);
-	*p &= ~(0x01 << (bit_number % 8));
+	*p &= (char)~(0x01 << (bit_number % 8));
 }
 
 //把指定的位设置为value的值
@@ -39,7 +39,7 @@ int test_bit(char bit_array[], unsigned int bit_number)
 {
 	char *p;
 	p = bit_array + (bit_number / 8);
-	if (*p && (0x01 << (bit_number % 8))) {
+	if (*p & (0x01 << (bit_number % 8))) {
 		return TRUE;
 	}
 	else {
