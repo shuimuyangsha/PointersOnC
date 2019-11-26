@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{E531CF51-54C4-4352-964F-F8C09DE7EF9B}</ProjectGuid>
-    <RootNamespace>Chapter6Pointers</RootNamespace>
+    <ProjectGuid>{0721D12A-2FF4-43F8-960A-BB1CF9B3D75B}</ProjectGuid>
+    <RootNamespace>Chapter12UseStructsAndPointers</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -115,21 +115,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="bit_array.c" />
-    <ClCompile Include="del_substr.c" />
-    <ClCompile Include="eratosthenes.c" />
-    <ClCompile Include="find_char.c" />
+    <None Include="Chapter12_UseStructsAndPointers.vsdx" />
+  </ItemGroup>
+  <ItemGroup>
     <ClCompile Include="main.c" />
-    <ClCompile Include="reverse_string.c" />
+    <ClCompile Include="sll_cnt.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="del_substr.h" />
-    <ClInclude Include="eratosthenes.h" />
-    <ClInclude Include="find_char.h" />
-    <ClInclude Include="reverse_string.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Chapter6_Pointers.vsdx" />
+    <ClInclude Include="sll_cnt.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

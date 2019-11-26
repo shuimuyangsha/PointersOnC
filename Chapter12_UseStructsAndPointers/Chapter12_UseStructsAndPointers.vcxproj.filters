@@ -15,42 +15,21 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Chapter12_UseStructsAndPointers.vsdx">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
     <ClCompile Include="main.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="find_char.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="del_substr.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="reverse_string.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="eratosthenes.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="bit_array.c">
+    <ClCompile Include="sll_cnt.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="find_char.h">
+    <ClInclude Include="sll_cnt.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="del_substr.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="reverse_string.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="eratosthenes.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Chapter6_Pointers.vsdx">
-      <Filter>资源文件</Filter>
-    </None>
   </ItemGroup>
 </Project>
