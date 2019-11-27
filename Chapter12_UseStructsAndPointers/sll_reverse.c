@@ -25,7 +25,10 @@ Node *sll_reverse(Node *first)
 	int node_len = 0;
 	int i;
 	Node *head;
-	Node *p_temp;
+	Node *cur = first;
+	Node *next;
+	Node *pre;
+	Node *p_temp = NULL;
 
 	node_len = my_get_sll_len(first);
 

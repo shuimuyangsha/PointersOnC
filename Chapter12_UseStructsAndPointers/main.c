@@ -58,9 +58,10 @@
 
 int main(void)
 {
-	Node six = { NULL, 6 };
-	Node four = { &six, 5 };
-	Node third = { &four, 4 };
+	Node sixth = { NULL, 7 };
+	Node fifth = { &sixth, 6 };
+	Node fourth = { &fifth, 5 };
+	Node third = { &fourth, 4 };
 	Node second = { &third, 3 };
 	Node first = { &second, 2 };
 	Node *head = &first;
