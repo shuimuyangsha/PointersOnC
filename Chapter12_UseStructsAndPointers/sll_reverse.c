@@ -6,37 +6,29 @@
 #include "sll_reverse.h"
 
 
-int my_get_sll_len(Node *first)
-{
-	int len;
-	Node *pre = NULL;
-	Node *cur = first;
-
-	while (cur != NULL ) {
-		pre = cur;
-		cur = cur->link;
-		len++;
-	}
-	return len;
-}
-
 Node *sll_reverse(Node *first)
 {
-	int node_len = 0;
-	int i;
-	Node *head;
 	Node *cur = first;
 	Node *next;
-	Node *pre;
-	Node *p_temp = NULL;
+	Node *pre = NULL;
+	Node *morePre = NULL;
 
-	node_len = my_get_sll_len(first);
-
-	for (i = 0; i < node_len / 2; i++) {
-		p_temp = first;
-		*(string + i) = *(string + ((string_len - 1) - i));
-		*(string + ((string_len - 1) - i)) = ch1;
+	if (first == NULL) {
+		return NULL;
 	}
 
-	return NULL;
+	while ((next = cur->link) != NULL) {
+		pre = cur;
+		cur = next;
+		pre->link = morePre;
+		morePre = pre;	
+	}
+
+	if (cur == first) {
+		return first;
+	}
+	else {
+		cur->link = pre;
+		return cur;
+	}
 }

@@ -66,11 +66,23 @@ int main(void)
 	Node first = { &second, 2 };
 	Node *head = &first;
 	Node * result = 0;
+	Node *cur = head;
+	Node *next;
+	printf("节点地址 %p\r\n", cur);
+	while ((cur) != NULL) {
+		next = cur->link;
+		printf("节点的值是 %d\r\n", cur->value);
+		cur = next;
+	}
 
-	result = sll_search(head, 6);
-
+	result = sll_reverse(head);
 	printf("节点地址 %p\r\n", result);
-	printf("搜索到的节点的值是 %d\r\n", result->value);
+	cur = result;
+	while ((cur) != NULL) {
+		next = cur->link;
+		printf("节点的值是 %d\r\n", cur->value);
+		cur = next;
+	}
 
 	while (1);
 	return 0;
