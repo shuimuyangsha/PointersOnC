@@ -120,11 +120,13 @@
   <ItemGroup>
     <ClCompile Include="main.c" />
     <ClCompile Include="sll_cnt.c" />
+    <ClCompile Include="sll_remove.c" />
     <ClCompile Include="sll_reverse.c" />
     <ClCompile Include="sll_search.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sll_cnt.h" />
+    <ClInclude Include="sll_remove.h" />
     <ClInclude Include="sll_reverse.h" />
     <ClInclude Include="sll_search.h" />
   </ItemGroup>
