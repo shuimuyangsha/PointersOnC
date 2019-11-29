@@ -145,6 +145,7 @@
 //#include "sll_search.h"
 //#include "sll_reverse.h"
 //#include "sll_remove.h"
+//#include "printList.h"
 //
 //int main(void)
 //{
@@ -186,133 +187,138 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define TRUE  1
-#define FALSE 0
-#define  EXIST 1
-#define  NOEXIST 0
-typedef struct Wordlist {
-	struct Wordlist *nextWord;
-	char *word;
-} wordlist;
+#include "sll_cnt.h"
+#include "sll_wordInsert.h"
+#include "printList.h"
 
-typedef struct Alphalist {
-	struct Alphalist *nextAlpha;
-	//单个单词链表的指针
-	wordlist * wlPtr;
-	char alpha;
-} alphalist;
 
-int isExist(wordlist *listPtr, char *string)
-{
-	wordlist *current = listPtr;
+//#define TRUE  1
+//#define FALSE 0
+//#define  EXIST 1
+//#define  NOEXIST 0
+//typedef struct Wordlist {
+//	struct Wordlist *nextWord;
+//	char *word;
+//} wordlist;
+//
+//typedef struct Alphalist {
+//	struct Alphalist *nextAlpha;
+//	//单个单词链表的指针
+//	wordlist * wlPtr;
+//	char alpha;
+//} alphalist;
 
-	while (current != NULL) {
-		if (strcmp(string, current->word) == 0) {
-			return EXIST;
-		}
-		current = current->nextWord;
-	}
-
-	return NOEXIST;
-}
-
-int wordInsert(wordlist **listPtr, char *string)
-{
-	wordlist **current = listPtr;
-	wordlist *new;
-	char *temp;
-
-	while (*current != NULL) {
-		//按字符排序进行插入
-		if (strcmp(string, (*current)->word) < 0) {
-			//生成new节点，插入到current之前,current为指向nextWord字段的指针
-			new = (wordlist *)malloc(sizeof(wordlist));
-			temp = (char *)malloc(strlen(string));
-			if (temp == NULL) {
-				return  FALSE;
-			}
-			strcpy(temp, string);
-			new->word = temp;
-			//new指向 *current
-			new->nextWord = *current;
-			//更新 *current为当前插入点
-			*current = new;
-			return TRUE;
-		}
-		//循环到下一点
-		current = &(*current)->nextWord;
-	}
-	//循环玩整个列表后，还未找到，则末尾追加上
-	temp = (char *)malloc(strlen(string));
-	if (temp == NULL) {
-		return  FALSE;
-	}
-	strcpy(temp, string);
-	new = (wordlist *)malloc(sizeof(wordlist));
-	new->word = temp;
-	new->nextWord = NULL;
-	*current = new;
-
-	return TRUE;
-}
-
-int WordAlphaListInsert(alphalist *ptr, char *string)
-{
-	char headCh = string[0];
-	alphalist *current = ptr;
-	wordlist *wl;
-	wordlist **rootPtr;
-	char *temp;
-
-	//通过首字符查找wordlist
-	while (current->alpha != headCh) {
-		current = current->nextAlpha;
-	}
-
-	//已经存在
-	if (isExist(current->wlPtr, string) == EXIST) {
-		return FALSE;
-	}
-	else {
-		//如果wordlist为NULL空，则创建初始单词链表
-		if (current->wlPtr == NULL) {
-			wl = (wordlist *)malloc(sizeof(wordlist));
-			//第一个节点，nextword为NULL
-			wl->nextWord = NULL;
-			//申请内存拷贝字符串
-			temp = (char *)malloc(strlen(string));
-			if (temp == NULL) {
-				return FALSE;
-			}
-			strcpy(temp, string);
-			wl->word = temp;
-			current->wlPtr = wl;
-		}
-		else {
-			//如果有单词表，则插入单词
-			rootPtr = &(current->wlPtr);
-			wordInsert(rootPtr, string);
-		}
-		return TRUE;
-	}
-}
-
-//打印链表内容
-void printList(alphalist *list)
-{
-	alphalist *currentAl = list;
-	wordlist  *currentWl;
-	while (currentAl != NULL) {
-		printf("%c:\n", currentAl->alpha);
-		currentWl = currentAl->wlPtr;
-		while (currentWl != NULL) {
-			printf("%s \t", currentWl->word);
-			currentWl = currentWl->nextWord;
-		}
-		printf("\n-----------------------\n");
-		currentAl = currentAl->nextAlpha;
-	}
-}
+//int isExist(wordlist *listPtr, char *string)
+//{
+//	wordlist *current = listPtr;
+//
+//	while (current != NULL) {
+//		if (strcmp(string, current->word) == 0) {
+//			return EXIST;
+//		}
+//		current = current->nextWord;
+//	}
+//
+//	return NOEXIST;
+//}
+//
+//int wordInsert(wordlist **listPtr, char *string)
+//{
+//	wordlist **current = listPtr;
+//	wordlist *new;
+//	char *temp;
+//
+//	while (*current != NULL) {
+//		//按字符排序进行插入
+//		if (strcmp(string, (*current)->word) < 0) {
+//			//生成new节点，插入到current之前,current为指向nextWord字段的指针
+//			new = (wordlist *)malloc(sizeof(wordlist));
+//			temp = (char *)malloc(strlen(string));
+//			if (temp == NULL) {
+//				return  FALSE;
+//			}
+//			strcpy(temp, string);
+//			new->word = temp;
+//			//new指向 *current
+//			new->nextWord = *current;
+//			//更新 *current为当前插入点
+//			*current = new;
+//			return TRUE;
+//		}
+//		//循环到下一点
+//		current = &(*current)->nextWord;
+//	}
+//	//循环玩整个列表后，还未找到，则末尾追加上
+//	temp = (char *)malloc(strlen(string));
+//	if (temp == NULL) {
+//		return  FALSE;
+//	}
+//	strcpy(temp, string);
+//	new = (wordlist *)malloc(sizeof(wordlist));
+//	new->word = temp;
+//	new->nextWord = NULL;
+//	*current = new;
+//
+//	return TRUE;
+//}
+//
+//int WordAlphaListInsert(alphalist *ptr, char *string)
+//{
+//	char headCh = string[0];
+//	alphalist *current = ptr;
+//	wordlist *wl;
+//	wordlist **rootPtr;
+//	char *temp;
+//
+//	//通过首字符查找wordlist
+//	while (current->alpha != headCh) {
+//		current = current->nextAlpha;
+//	}
+//
+//	//已经存在
+//	if (isExist(current->wlPtr, string) == EXIST) {
+//		return FALSE;
+//	}
+//	else {
+//		//如果wordlist为NULL空，则创建初始单词链表
+//		if (current->wlPtr == NULL) {
+//			wl = (wordlist *)malloc(sizeof(wordlist));
+//			//第一个节点，nextword为NULL
+//			wl->nextWord = NULL;
+//			//申请内存拷贝字符串
+//			temp = (char *)malloc(strlen(string));
+//			if (temp == NULL) {
+//				return FALSE;
+//			}
+//			strcpy(temp, string);
+//			wl->word = temp;
+//			current->wlPtr = wl;
+//		}
+//		else {
+//			//如果有单词表，则插入单词
+//			rootPtr = &(current->wlPtr);
+//			wordInsert(rootPtr, string);
+//		}
+//		return TRUE;
+//	}
+//}
+//
+////打印链表内容
+//void printList(alphalist *list)
+//{
+//	alphalist *currentAl = list;
+//	wordlist  *currentWl;
+//	while (currentAl != NULL) {
+//		printf("%c:\n", currentAl->alpha);
+//		currentWl = currentAl->wlPtr;
+//		while (currentWl != NULL) {
+//			printf("%s \t", currentWl->word);
+//			currentWl = currentWl->nextWord;
+//		}
+//		printf("\n-----------------------\n");
+//		currentAl = currentAl->nextAlpha;
+//	}
+//}
 
 int main()
 {

@@ -12,6 +12,11 @@ typedef struct WORD_list {
 	char				*word;
 }wordlist;
 
+typedef struct Alphalist {
+	struct Alphalist *nextAlpha;
+	wordlist *wlPtr;
+	char alpha;
+}alphalist;
 
 int sll_count_nodes(struct NODE *first);
 

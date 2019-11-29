@@ -123,6 +123,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.c" />
+    <ClCompile Include="printList.c" />
     <ClCompile Include="sll_cnt.c" />
     <ClCompile Include="sll_remove.c" />
     <ClCompile Include="sll_reverse.c" />
@@ -130,6 +131,7 @@
     <ClCompile Include="sll_wordInsert.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="printList.h" />
     <ClInclude Include="sll_cnt.h" />
     <ClInclude Include="sll_remove.h" />
     <ClInclude Include="sll_reverse.h" />
