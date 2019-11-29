@@ -35,6 +35,9 @@
     <ClCompile Include="sll_remove.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="sll_wordInsert.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sll_cnt.h">
@@ -47,6 +50,9 @@
       <Filter>源文件</Filter>
     </ClInclude>
     <ClInclude Include="sll_remove.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="sll_wordInsert.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
