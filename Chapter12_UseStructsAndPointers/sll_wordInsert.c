@@ -35,14 +35,15 @@ int sll_wordInsert(wordlist **listPtr, char *string)
 			if (temp == NULL) {
 				return FALSE;
 			}
-			memcpy(temp,string,strlen(string));
+			//memcpy(temp,string,strlen(string));
+			strcpy(temp, string);
 			new->word = temp;
 			new->NextWord = *current;
 			*current = new;
 
 			return TRUE;
 		}
-		*current = (*current)->NextWord;
+		current = &(*current)->NextWord;
 	}
 
 	new = (wordlist*)malloc(sizeof(wordlist));
@@ -50,7 +51,10 @@ int sll_wordInsert(wordlist **listPtr, char *string)
 	if (temp == NULL) {
 		return FALSE;
 	}
-	strcpy(new->word,temp);
+	//memcpy(temp, string, strlen(string));
+	strcpy(temp, string);
+
+	new->word = temp;
 	new->NextWord = NULL;
 	*current = new;
 
