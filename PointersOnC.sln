@@ -3,16 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.852
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Chapter2_BasicConcepts", "Chapter2_BasicConcepts\Chapter2_BasicConcepts.vcxproj", "{0C71CA52-CE75-49D3-B0EB-9A8FA88DDCA6}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Chapter02_BasicConcepts", "Chapter2_BasicConcepts\Chapter2_BasicConcepts.vcxproj", "{0C71CA52-CE75-49D3-B0EB-9A8FA88DDCA6}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Chapter6_Pointers", "Chapter6_Pointers\Chapter6_Pointers.vcxproj", "{E531CF51-54C4-4352-964F-F8C09DE7EF9B}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Chapter06_Pointers", "Chapter6_Pointers\Chapter6_Pointers.vcxproj", "{E531CF51-54C4-4352-964F-F8C09DE7EF9B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{174FC3B3-4526-4A10-A235-6BFB0C740EA7}"
 	ProjectSection(SolutionItems) = preProject
 		..\..\..\嵌入式学习\资料\野火STM32\1-F429至尊版\A盘（资料盘）\8-C语言学习资料\C和指针.pdf = ..\..\..\嵌入式学习\资料\野火STM32\1-F429至尊版\A盘（资料盘）\8-C语言学习资料\C和指针.pdf
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Chapter5_OperatorsAndExpressions", "Chapter5_OperatorsAndExpressions\Chapter5_OperatorsAndExpressions.vcxproj", "{0487ECF5-C47E-4C06-98DE-C156137C521E}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Chapter05_OperatorsAndExpressions", "Chapter5_OperatorsAndExpressions\Chapter5_OperatorsAndExpressions.vcxproj", "{0487ECF5-C47E-4C06-98DE-C156137C521E}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Chapter12_UseStructsAndPointers", "Chapter12_UseStructsAndPointers\Chapter12_UseStructsAndPointers.vcxproj", "{0721D12A-2FF4-43F8-960A-BB1CF9B3D75B}"
 EndProject

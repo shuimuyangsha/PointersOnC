@@ -52,9 +52,9 @@ resize_queue(size_t new_size)
 	** one of the right size.
 	*/
 	if (front <= rear)
-		i = rear ¨C front + 1;
+		i = rear - front + 1;
 	else
-		i = queue_size ¨C front + rear + 1;
+		i = queue_size-front + rear + 1;
 	i %= queue_size;
 	assert(new_size >= i);
 	old_queue = queue;
@@ -73,7 +73,7 @@ resize_queue(size_t new_size)
 		i += 1;
 	}
 	front = 0;
-	rear = (i + queue_size ¨C 1) % queue_size;
+	rear = (i + queue_size-1) % queue_size;
 	free(old_queue);
 }
 /*
