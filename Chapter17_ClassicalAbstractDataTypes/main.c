@@ -28,6 +28,6 @@ int main(void)
 	else {
 		printf("文件未正常打开");
 	}
-
+	1
 }
 
