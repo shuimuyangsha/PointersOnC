@@ -41,6 +41,7 @@ void	delete( void );
 */
 QUEUE_TYPE first( void );
 
+QUEUE_TYPE last(void);
 /*
 ** is_empty
 **	Returns TRUE if the queue is empty, else FALSE

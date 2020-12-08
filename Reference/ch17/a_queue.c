@@ -48,6 +48,12 @@ QUEUE_TYPE first( void )
 	return queue[ front ];
 }
 
+QUEUE_TYPE last(void)
+{
+	assert(!is_empty());
+	return queue[rear];
+}
+
 /*
 **	is_empty
 */
