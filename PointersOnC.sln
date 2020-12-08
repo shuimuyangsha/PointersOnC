@@ -9,7 +9,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Chapter06_Pointers", "Chapt
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{174FC3B3-4526-4A10-A235-6BFB0C740EA7}"
 	ProjectSection(SolutionItems) = preProject
-		..\..\..\嵌入式学习\资料\野火STM32\1-F429至尊版\A盘（资料盘）\8-C语言学习资料\C和指针.pdf = ..\..\..\嵌入式学习\资料\野火STM32\1-F429至尊版\A盘（资料盘）\8-C语言学习资料\C和指针.pdf
+		..\..\..\工作资料\我的图书库\专业理论图书\C语言学习资料\C和指针.pdf = ..\..\..\工作资料\我的图书库\专业理论图书\C语言学习资料\C和指针.pdf
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Chapter05_OperatorsAndExpressions", "Chapter5_OperatorsAndExpressions\Chapter5_OperatorsAndExpressions.vcxproj", "{0487ECF5-C47E-4C06-98DE-C156137C521E}"
@@ -19,6 +19,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Chapter17_ClassicalAbstractDataTypes", "Chapter17_ClassicalAbstractDataTypes\Chapter17_ClassicalAbstractDataTypes.vcxproj", "{93FA7BEC-E953-4A5F-8C2E-0C11C7AED4E3}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Chapter07_Function", "Chapter07_Function\Chapter07_Function.vcxproj", "{3BBED12F-5721-4907-AF44-B7A9F7EE77B0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Chapter13_SeniorPointer", "Chapter13_SeniorPointer\Chapter13_SeniorPointer.vcxproj", "{89491559-71E8-4B95-861A-6E386C2834BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -76,6 +78,14 @@ Global
 		{3BBED12F-5721-4907-AF44-B7A9F7EE77B0}.Release|x64.Build.0 = Release|x64
 		{3BBED12F-5721-4907-AF44-B7A9F7EE77B0}.Release|x86.ActiveCfg = Release|Win32
 		{3BBED12F-5721-4907-AF44-B7A9F7EE77B0}.Release|x86.Build.0 = Release|Win32
+		{89491559-71E8-4B95-861A-6E386C2834BF}.Debug|x64.ActiveCfg = Debug|x64
+		{89491559-71E8-4B95-861A-6E386C2834BF}.Debug|x64.Build.0 = Debug|x64
+		{89491559-71E8-4B95-861A-6E386C2834BF}.Debug|x86.ActiveCfg = Debug|Win32
+		{89491559-71E8-4B95-861A-6E386C2834BF}.Debug|x86.Build.0 = Debug|Win32
+		{89491559-71E8-4B95-861A-6E386C2834BF}.Release|x64.ActiveCfg = Release|x64
+		{89491559-71E8-4B95-861A-6E386C2834BF}.Release|x64.Build.0 = Release|x64
+		{89491559-71E8-4B95-861A-6E386C2834BF}.Release|x86.ActiveCfg = Release|Win32
+		{89491559-71E8-4B95-861A-6E386C2834BF}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
